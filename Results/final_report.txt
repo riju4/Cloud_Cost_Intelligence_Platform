@@ -1,0 +1,17 @@
+
+CLOUD COST INTELLIGENCE REPORT
+--------------------------------
+
+Total Cost: 15119.2407
+Average Cost: 0.814263286299009
+
+Top Service: database
+Top Region: eu-central-1
+
+Alerts: 2 issues detected
+
+Key Insight:
+Cost is primarily driven by usage quantity and service selection.
+
+Recommendation:
+Focus on high-cost services and optimize pricing strategies.

@@ -1,0 +1,3 @@
+Optimize high-cost service: database
+Consider switching from on-demand to reserved/spot instances
+Monitor cost spikes and investigate anomalies

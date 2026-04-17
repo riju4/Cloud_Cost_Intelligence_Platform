@@ -1,0 +1,207 @@
+/* WebPlatform/css/style.css */
+
+:root {
+    --bg-color: #0b0f19;
+    --panel-bg: rgba(22, 28, 45, 0.6);
+    --panel-border: rgba(255, 255, 255, 0.08);
+    --text-main: #f8f9fa;
+    --text-muted: #94a3b8;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --success: #10b981;
+    --danger: #ef4444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+    background: var(--panel-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+}
+.logo span {
+    color: var(--accent);
+}
+
+.filter-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.premium-select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.2) url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 35px;
+    border: 1px solid var(--panel-border);
+    border-radius: 8px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.premium-select:focus {
+    border-color: var(--accent);
+}
+.premium-select option {
+    background: var(--bg-color);
+}
+
+.btn-primary {
+    padding: 12px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.status-indicator {
+    margin-top: auto;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: gray;
+}
+.dot.active {
+    background: var(--success);
+    box-shadow: 0 0 10px var(--success);
+}
+
+/* Main Content */
+.main-dashboard {
+    flex: 1;
+    padding: 20px 20px 20px 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard-header .header-titles h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+}
+.dashboard-header .header-titles p {
+    margin: 5px 0 0 0;
+    color: var(--text-muted);
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.metric-card {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-icon {
+    font-size: 40px;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.metric-data h4 {
+    margin: 0;
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 14px;
+}
+.metric-data h2 {
+    margin: 5px 0 0 0;
+    font-size: 32px;
+    color: white;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chart-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.chart-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}

@@ -1,0 +1,5 @@
+Total Cost: 15119.2407
+Average Cost: 0.814263286299009
+Max Cost: 3.0025
+Min Cost: 0.005
+Total Records: 18568
